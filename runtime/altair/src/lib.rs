@@ -1490,7 +1490,7 @@ impl_runtime_apis! {
 			list_benchmark!(list, extra, frame_system, SystemBench::<Runtime>);
 			list_benchmark!(list, extra, pallet_timestamp, Timestamp);
 			list_benchmark!(list, extra, pallet_balances, Balances);
-			// TODO: Not working as benches expect everbody to be whitelisted to register
+			// TODO: Not working as benches expect everybody to be whitelisted to register
 			//       as collator. But our runtimes restrict this. A PR to the cumulus
 			//       benches is needed or benchmarks allow some kind of pre-setup logic
 			// list_benchmark!(list, extra, pallet_collator_selection, CollatorSelection);
@@ -1522,6 +1522,7 @@ impl_runtime_apis! {
 			list_benchmark!(list, extra, pallet_pools, Pools);
 			list_benchmark!(list, extra, pallet_loans, LoansPallet::<Runtime>);
 			list_benchmark!(list, extra, pallet_interest_accrual, InterestAccrual);
+			list_benchmark!(list, extra, pallet_restricted_tokens, Tokens);
 
 			let storage_info = AllPalletsWithSystem::storage_info();
 
@@ -1587,6 +1588,7 @@ impl_runtime_apis! {
 			add_benchmark!(params, batches, pallet_pools, Pools);
 			add_benchmark!(params, batches, pallet_loans, LoansPallet::<Runtime>);
 			add_benchmark!(params, batches, pallet_interest_accrual, InterestAccrual);
+			add_benchmark!(params, batches, pallet_restricted_tokens, Tokens);
 
 			if batches.is_empty() { return Err("Benchmark not found for this pallet.".into()) }
 			Ok(batches)
