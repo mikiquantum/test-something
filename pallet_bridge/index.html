@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Bridge pallet"><meta name="keywords" content="rust, rustlang, rust-lang, pallet_bridge"><title>pallet_bridge - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../dark.css" disabled><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../storage.js"></script><script src="../crates.js"></script><script defer src="../main.js"></script>
+    <noscript><link rel="stylesheet" href="../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../favicon.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../pallet_bridge/index.html"><div class="logo-container"><img class="rust-logo" src="../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../pallet_bridge/index.html"><div class="logo-container"><img class="rust-logo" src="../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"><a href="#">Crate pallet_bridge</a></h2><div class="sidebar-elems"><div class="block"><ul><li class="version">Version 2.0.0</li><li><a id="all-types" href="all.html">All Items</a></li></div></ul><section><div class="block"><ul><li><a href="#modules">Modules</a></li></ul></div></section><div id="sidebar-vars" data-name="pallet_bridge" data-ty="mod" data-relpath=""></div><script defer src="sidebar-items.js"></script></div></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../pallet_bridge/index.html"><img class="rust-logo" src="../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="main-heading">
+    <h1 class="fqn"><span class="in-band">Crate <a class="mod" href="#">pallet_bridge</a><button id="copy-path" onclick="copy_path(this)" title="Copy item path to clipboard"><img src="../clipboard.svg" width="19" height="18" alt="Copy item path"></button></span></h1><span class="out-of-band"><a class="srclink" href="../src/pallet_bridge/lib.rs.html#14-484">source</a> · <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="bridge-pallet"><a href="#bridge-pallet">Bridge pallet</a></h2>
+<p>This pallet implements a bridge between Chainbridge and Centrifuge Chain.</p>
+<ul>
+<li><a href="pallet/trait.Config.html" title="Config"><code>Config</code></a></li>
+<li><a href="pallet/enum.Call.html" title="Call"><code>Call</code></a></li>
+<li><a href="pallet/struct.Pallet.html" title="Pallet"><code>Pallet</code></a></li>
+</ul>
+<h3 id="overview"><a href="#overview">Overview</a></h3>
+<p>This pallet is used for bridging chains.</p>
+<h3 id="terminology"><a href="#terminology">Terminology</a></h3><h3 id="usage"><a href="#usage">Usage</a></h3><h3 id="interface"><a href="#interface">Interface</a></h3><h4 id="supported-origins"><a href="#supported-origins">Supported Origins</a></h4>
+<p>Signed origin is valid.</p>
+<h4 id="types"><a href="#types">Types</a></h4>
+<p><code>BridgeOrigin</code> - Specifies the origin check provided by the chainbridge for calls that can only be called by the chainbridge pallet.
+<code>AdminOrigin</code> - Admin user authorized to modify <a href="pallet/type.NativeTokenTransferFee.html" title="NativeTokenTransferFee">NativeTokenTransferFee</a> and <a href="pallet/type.NftTokenTransferFee.html" title="NftTokenTransferFee">NftTokenTransferFee</a> values.
+<code>Currency</code> - Currency as viewed from this pallet.
+<code>Event</code> - Type for events triggered by this pallet.
+<code>NativeTokenId</code> - Identifier of the native token.
+<code>NativeTokenTransferFee</code> - Additional fee charged for transfering native tokens.
+<code>NftTokenTransferFee</code> - Additional fee charged when moving NFTs to target chains.
+<code>WeightInfo</code> - Weight information for extrinsics in this pallet.</p>
+<h4 id="events"><a href="#events">Events</a></h4>
+<p><code>Remark</code> - Event triggered a remark proposal is approved.</p>
+<h4 id="errors"><a href="#errors">Errors</a></h4>
+<p><code>InvalidTransfer</code> - Invalid transfer.
+<code>InsufficientBalance</code> - Not enough resources/assets for performing a transfer.
+<code>TotalAmountOverflow</code> - Total amount to be transfered overflows balance type size.</p>
+<h4 id="dispatchable-functions"><a href="#dispatchable-functions">Dispatchable Functions</a></h4>
+<p>Callable functions (or extrinsics), also considered as transactions, materialize the
+pallet contract. Here’s the callable functions implemented in this module:</p>
+<p>[<code>receive_nonfungible</code>]
+[<code>remark</code>]
+[<code>transfer</code>]
+[<code>transfer_asset</code>]
+[<code>transfer_native</code>]
+[<code>set_native_token_transfer_fee</code>]
+[<code>set_nft_token_transfer_fee</code>]</p>
+<h4 id="public-functions"><a href="#public-functions">Public Functions</a></h4><h3 id="genesis-configuration"><a href="#genesis-configuration">Genesis Configuration</a></h3>
+<p>This pallet depends on the <a href="pallet/struct.GenesisConfig.html" title="GenesisConfig"><code>GenesisConfig</code></a>. The following fields are added to
+the genesis configuration, that are not associated with specific storage values:
+<code>chains: Vec&lt;u8&gt;</code> - List of chains.
+<code>relayers: Vec&lt;T::AccountId&gt;</code>- List of relayers.
+<code>resources: Vec&lt;(ResourceId, Vec&lt;u8&gt;)&gt;</code> - List of resources (or assets).
+<code>threshold: u32</code> - Threshold value.</p>
+<h3 id="related-pallets"><a href="#related-pallets">Related Pallets</a></h3>
+<p>This pallet is tightly coupled to the following pallets:</p>
+<ul>
+<li>Substrate FRAME’s <a href="https://github.com/paritytech/substrate/tree/master/frame/balances"><code>balances</code> pallet</a>.</li>
+<li>Centrifuge Chain <a href="https://github.com/centrifuge/chainbridge-substrate"><code>chainbrige</code> pallet</a>.</li>
+<li>Centrifuge Chain <a href="https://github.com/centrifuge/centrifuge-chain/tree/master/pallets/fees"><code>fees</code> pallet</a>.</li>
+<li>Centrifuge Chain <a href="https://github.com/centrifuge/centrifuge-chain/tree/master/pallets/nft"><code>nft</code> pallet</a>.</li>
+<li>Centrifuge Chain <a href="https://github.com/centrifuge/centrifuge-chain/tree/master/pallets/registry"><code>registry</code> pallet</a>.</li>
+</ul>
+<h3 id="references"><a href="#references">References</a></h3>
+<ul>
+<li><a href="https://crates.parity.io/frame_support/attr.pallet.html">Substrate FRAME v2 attribute macros</a>.</li>
+</ul>
+<h3 id="credits"><a href="#credits">Credits</a></h3>
+<p>The Centrifugians Tribe <a href="mailto:contributors@centrifuge.io">contributors@centrifuge.io</a></p>
+<h3 id="license"><a href="#license">License</a></h3>
+<p>GNU General Public License, Version 3, 29 June 2007 <a href="https://www.gnu.org/licenses/gpl-3.0.html">https://www.gnu.org/licenses/gpl-3.0.html</a></p>
+</div></details><h2 id="reexports" class="small-section-header"><a href="#reexports">Re-exports</a></h2>
+<div class="item-table"><div class="item-row"><div class="item-left import-item"><code>pub use <a class="mod" href="pallet/index.html" title="mod pallet_bridge::pallet">pallet</a>::*;</code></div><div class="item-right docblock-short"></div></div></div><h2 id="modules" class="small-section-header"><a href="#modules">Modules</a></h2>
+<div class="item-table"><div class="item-row"><div class="item-left module-item"><a class="mod" href="pallet/index.html" title="pallet_bridge::pallet mod">pallet</a></div><div class="item-right docblock-short"><p>The module that hosts all the
+<a href="https://docs.substrate.io/v3/runtime/frame">FRAME</a>
+types needed to add this pallet to a
+runtime.</p>
+</div></div><div class="item-row"><div class="item-left module-item"><a class="mod" href="traits/index.html" title="pallet_bridge::traits mod">traits</a></div><div class="item-right docblock-short"><p>Traits used by bridge pallet</p>
+</div></div></div></section></div></main><div id="rustdoc-vars" data-root-path="../" data-current-crate="pallet_bridge" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.62.0-nightly (cb1219871 2022-05-08)" ></div>
+</body></html>

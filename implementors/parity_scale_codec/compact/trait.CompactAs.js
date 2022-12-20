@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["runtime_common"] = [{"text":"impl CompactAs for <a class=\"struct\" href=\"runtime_common/types/struct.TrancheWeight.html\" title=\"struct runtime_common::types::TrancheWeight\">TrancheWeight</a>","synthetic":false,"types":["runtime_common::types::TrancheWeight"]},{"text":"impl CompactAs for <a class=\"struct\" href=\"runtime_common/types/struct.ItemId.html\" title=\"struct runtime_common::types::ItemId\">ItemId</a>","synthetic":false,"types":["runtime_common::types::ItemId"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

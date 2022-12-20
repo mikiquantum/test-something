@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["common_types"] = [{"text":"impl&lt;T&gt; UnixTime for <a class=\"struct\" href=\"common_types/struct.TimeProvider.html\" title=\"struct common_types::TimeProvider\">TimeProvider</a>&lt;T&gt; <span class=\"where fmt-newline\">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: UnixTime,&nbsp;</span>","synthetic":false,"types":["common_types::TimeProvider"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
